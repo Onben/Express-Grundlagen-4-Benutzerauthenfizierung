@@ -3,8 +3,7 @@ on: [push]
 
 
 jobs:
-  express-login-logout:
-    name: Build Frontend
+  build-express-login-logout: 
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -13,9 +12,6 @@ jobs:
         with:
           node-version: '20.x'
       - run: npm ci
-
-      - name: build
-        run: npm run build
 
       - name: Start the server 
         run: npm start & sleep 5
