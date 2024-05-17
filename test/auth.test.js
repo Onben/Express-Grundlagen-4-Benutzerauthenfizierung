@@ -5,7 +5,7 @@ describe('Authentication', () => {
     it('should login with correct credentials', async () => {
         const res = await request(app)
             .post('/login')
-            .send({ username: 'ons', password: 'onspassword' });
+            .send({ username: 'ons2', password: 'password2' });
         expect(res.statusCode).toEqual(200);
         expect(res.text).toEqual('Login successful!');
     });

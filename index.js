@@ -1,12 +1,10 @@
 const express = require('express');
 const session = require('express-session');
-const bodyParser = require('body-parser');
 
 const app = express();
+app.use(express.json());
 const PORT = 3000;
 
-
-app.use(bodyParser.urlencoded({ extended: true }));
 app.use(session({
     secret: 'supersecret',
     resave: false,
